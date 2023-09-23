@@ -1,0 +1,92 @@
+nav{
+    background-color: rgba(5, 5, 5, 0.855);
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: monospace;
+    display: flex;
+    justify-content: flex-start;
+    height: 40px;
+    cursor: pointer;
+}
+
+.game{
+    margin-top: 10vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.gameBoard{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+}
+
+.gameBoard  :nth-of-type(3n){
+    border-right: 0px;
+}
+
+.gameBoard :nth-of-type(3n-2){
+    border-left: 0px;
+}
+
+.gameBoard .top, .gameBoard .bottom{
+    border-top: none;
+    border-bottom: none;
+}
+
+.box{
+    color: rgb(56, 56, 158);
+    font-size: 7vw;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid rgb(255, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameBoard :hover{
+    background-color: rgb(192, 246, 206);
+}
+
+h1{
+    font-size: 5vh;
+}
+
+.whoseTurn{
+    font-size: 4vw;
+    font-family: cursive;
+    margin-left: 10vw;
+    color: rgb(255, 0, 0);
+}
+
+button{
+    margin-top: 2vw;
+    display: block;
+    background-color: beige;
+    font-size: 1.25rem;
+}
+
+.gameInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+@media (max-width:700px){
+    h1{
+        font-size: 1.5rem;
+    }
+
+    button{
+        font-size: medium;
+    }
+
+    .whoseTurn{
+        font-size: 1.33rem;
+    }
+}
+
